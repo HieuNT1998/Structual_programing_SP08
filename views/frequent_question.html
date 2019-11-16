@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>FAQ</title>
+    <style>
+        #color_header {
+            background-color: black;
+        }
+
+        #color_title {
+            color: black !important;
+        }
+
+        #color_name {
+            color: black !important;
+        }
+
+        #width_textarea {
+            width: 300px !important;
+        }
+        #update {
+            margin-left: 1000px;
+            background-color: rgb(97, 156, 223);
+            display: none;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="cd-header flex flex-column flex-center" id="color_header">
+        <div class="text-component text-center">
+            <h1>HEDSPI</h1>
+        </div>
+    </header>
+    <section class="cd-faq js-cd-faq container max-width-md margin-top-lg margin-bottom-lg">
+        <ul class="cd-faq__categories">
+            <li><a class="cd-faq__category cd-faq__category-selected truncate" href="#basics">Những điều cơ bản</a></li>
+            <li><a class="cd-faq__category truncate" href="#product"> Sản phẩm</a></li>
+            <li><a class="cd-faq__category truncate" href="#account"> Tài khoản</a></li>
+            <li><a class="cd-faq__category truncate" href="#payments">Thanh toán</a></li>
+            <li><a class="cd-faq__category truncate" href="#booking">Đặt hàng</a></li>
+            <li><a class="cd-faq__category truncate" href="#guarantee">Bảo hành</a></li>
+        </ul>
+
+        <div class="cd-faq__items">
+            <ul id="basics" class="cd-faq__group">
+                <li class="cd-faq__title">
+                    <h2 id="color_title">Những điều cơ bản</h2>
+                </li>
+
+            </ul>
+
+            <ul id="product" class="cd-faq__group">
+                <li class="cd-faq__title">
+                    <h2 id="color_title">Sản phẩm</h2>
+                </li>
+
+            </ul> 
+
+            <ul id="account" class="cd-faq__group">
+                <li class="cd-faq__title">
+                    <h2 id="color_title">Tài khoản</h2>
+                </li>
+
+            </ul> 
+
+            <ul id="payments" class="cd-faq__group">
+                <li class="cd-faq__title">
+                    <h2 id="color_title">Thanh toán</h2>
+                </li>
+
+            </ul> 
+
+            <ul id="booking" class="cd-faq__group">
+                <li class="cd-faq__title">
+                    <h2 id="color_title">Đặt hàng</h2>
+                </li>
+
+            </ul> 
+
+            <ul id="guarantee" class="cd-faq__group">
+                <li class="cd-faq__title">
+                    <h2 id="color_title">Bảo hành</h2>
+                </li>
+            </ul> 
+        </div>
+
+        <a href="#0" class="cd-faq__close-panel text-replace">Close</a>
+
+        <div class="cd-faq__overlay" aria-hidden="true"></div>
+        
+    </section> <!-- cd-faq -->
+    <button class="btn btn-primary" id="update"> update </button>
+
+    <script src="../assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/frequent_question.js"></script>
+</body>
+</html>

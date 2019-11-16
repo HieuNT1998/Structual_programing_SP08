@@ -1,0 +1,78 @@
+header{
+    height: 250px;
+    width: 100%;
+    background-color: black;
+    padding-top: 100px;
+    margin-bottom: 30px;
+}
+header h1{
+    text-align: center;
+    color: white;
+}
+
+/* home page bao hanh */
+.bao_hanh .infor {
+    height: 120px;
+}
+
+.bao_hanh {
+    text-align: center;
+}
+
+/* Guarantee file css */
+.guarantee {
+    text-align: center;
+}
+
+.guarantee .input input {
+    height: 40px;
+    margin: 5px;
+    width: 500px;
+}
+
+.guarantee .input button {
+    height: 40px;
+    background-color: rgb(4, 75, 167);
+    border: 1px solid black;
+    color: white;
+}
+
+/* repair_schedule file css */
+.repair_schedule {
+    text-align: center;
+}
+
+.repair_schedule input {
+    height: 40px;
+    margin: 5px;
+    width: 500px;
+}
+
+.repair_schedule button {
+    height: 40px;
+    background-color: rgb(4, 75, 167);
+    border: 1px solid black;
+    color: white;
+}
+
+/* update_schedule file css */
+.update_guarantee {
+    text-align: center;
+}
+
+.update_guarantee .input input {
+    height: 40px;
+    margin: 5px;
+    width: 500px;
+}
+.update_guarantee .input button {
+    height: 40px;
+    background-color: rgb(4, 75, 167);
+    border: 1px solid black;
+    color: white;
+}
+
+/* admin button */
+#admin_button {
+    display: none;
+}

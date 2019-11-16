@@ -1,0 +1,91 @@
+.footer {
+    height: 400px;
+    background-color: rgb(41, 38, 38);
+    color: white;
+    padding-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer h4 {
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: rgb(158, 160, 53);
+
+}
+
+.footer li {
+    /* list-style-type: none; */
+    margin-bottom: 5px;
+}
+
+.footer a {
+    color: rgb(255, 255, 255);
+}
+
+.footer .face-you-zalo {
+    list-style-type: none;
+}
+
+.footer td {
+    padding: 10px;
+}
+
+.footer select {
+    margin-bottom: 20px;
+}
+
+textarea {
+    margin-bottom: 20px;
+}
+
+.footer h3 {
+    color: rgb(158, 160, 53);
+    text-align: center;
+}
+
+.footer img {
+    width: 30px;
+    height: auto;
+}
+
+.footer button {
+    background-color:rgb(41, 38, 38);
+    border-color:rgb(158, 160, 53);
+}
+.footer button:hover{
+    background-color: rgb(158, 160, 53);
+}
+.footer button:active{
+    background-color: rgb(158, 160, 53);
+}
+.footer h3 img {
+    width: 40px;
+    height: auto;
+}
+
+.footer .line {
+    text-align: center;
+    color: white;
+}
+
+.footer .descript {
+    color: rgb(122, 122, 122);
+    font-size: 14px;
+    margin-top: 15px;
+    padding-left: 160px;
+}
+
+.footer .question {
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+.footer .question img {
+
+    margin-top: -10px;
+}
+.footer .Gop_y_content{
+    width: 80%;
+    margin-left: 30px;
+}
