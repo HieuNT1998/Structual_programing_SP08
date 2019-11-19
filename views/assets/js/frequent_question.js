@@ -5,7 +5,7 @@ if (index_admin != -1) {
     $('#update').css("display", "block");
 }
 $.ajax({
-    url: '../get_faq',
+    url: '/get_faq',
     type: 'get',
     success: (data) => {
         // console.log(data)

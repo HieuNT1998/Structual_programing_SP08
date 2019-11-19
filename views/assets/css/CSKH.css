@@ -76,3 +76,8 @@ header h1{
 #admin_button {
     display: none;
 }
+
+.CSKH_content{
+    margin-bottom: 30px;
+    text-align: center;
+}

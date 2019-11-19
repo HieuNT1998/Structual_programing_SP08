@@ -1,5 +1,5 @@
 topic_name = ["Chất lượng dịch vụ","Nhân viên","Sản phẩm"]
-    $('button').on('click',(req,res)=>{
+    $('.footer button').on('click',(req,res)=>{
         var topic = $('select').val();
         var content = $('textarea').val();
         var feedback ={
