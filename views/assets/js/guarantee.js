@@ -1,4 +1,5 @@
-$('.guarantee button').on('click', (req, res) => {
+$('.guarantee .button').on('click', (req, res) => {
+    $('.guarantee table tbody').empty();
     var orderID = $('.guarantee input').val()
     $.ajax({
         url: '/order/' + orderID,

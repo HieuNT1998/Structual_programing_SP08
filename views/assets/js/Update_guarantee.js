@@ -1,8 +1,8 @@
 
 var index_product = 1;
 var scheduleID
-$('.update_guarantee button').on('click', (req, res) => {
-    // alert("Hello")
+$('.update_guarantee .button').on('click', (req, res) => {
+    $('.update_guarantee table tbody').empty();
     $('#admin_button').css("display", "block");
     scheduleID = $('.update_guarantee input').val();
     $.ajax({

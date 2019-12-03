@@ -1,75 +1,56 @@
-header{
-    height: 250px;
-    width: 100%;
-    background-color: black;
-    padding-top: 100px;
-    margin-bottom: 30px;
+
+.intro-2 {
+    background: url("https://images.pexels.com/photos/291762/pexels-photo-291762.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")no-repeat center center;
+    background-size: cover;
 }
-header h1{
-    text-align: center;
-    color: white;
+.view {
+    margin-top: -56px;
+}
+.navbar {
+    z-index: 1;
+}
+
+html,body,
+.view {
+    height: 100%;
 }
 
 /* home page bao hanh */
-.bao_hanh .infor {
-    height: 120px;
+.infor {
+    margin: 50px;
 }
 
 .bao_hanh {
     text-align: center;
 }
 
+
+.feedback{
+    height: 78%;
+    padding-top: 2%;
+}
+
 /* Guarantee file css */
 .guarantee {
     text-align: center;
-}
-
-.guarantee .input input {
-    height: 40px;
-    margin: 5px;
-    width: 500px;
-}
-
-.guarantee .input button {
-    height: 40px;
-    background-color: rgb(4, 75, 167);
-    border: 1px solid black;
-    color: white;
+    height: 78%;
 }
 
 /* repair_schedule file css */
 .repair_schedule {
     text-align: center;
-}
-
-.repair_schedule input {
-    height: 40px;
-    margin: 5px;
-    width: 500px;
-}
-
-.repair_schedule button {
-    height: 40px;
-    background-color: rgb(4, 75, 167);
-    border: 1px solid black;
-    color: white;
+    height: 78%;
 }
 
 /* update_schedule file css */
 .update_guarantee {
     text-align: center;
+    height: 78%;
 }
 
-.update_guarantee .input input {
-    height: 40px;
-    margin: 5px;
-    width: 500px;
-}
-.update_guarantee .input button {
-    height: 40px;
-    background-color: rgb(4, 75, 167);
-    border: 1px solid black;
-    color: white;
+.create_guarantee{
+    padding-top: 2%;
+    padding-bottom: 15%;
 }
 
 /* admin button */

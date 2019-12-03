@@ -6,103 +6,231 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CSKH</title>
+    <link rel="shortcut icon" href="https://image.flaticon.com/icons/png/512/126/126083.png" type="image/x-icon" />
     <link rel="stylesheet" href="../assets/css/CSKH.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css" rel="stylesheet">
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"></script>
 </head>
 
 <body>
     <header>
-        <h1>Chăm sóc khách hàng</h1>
-    </header>
-    <div class="CSKH_content container" >
-        <a href="CSKH/bao-hanh">
-            <button class="btn btn-success">Bảo Hành</button>
-        </a>
-    </div>
-    <div class="footer">
-        <h3><img
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAIAAAD/gAIDAAAABmJLR0QA/wD/AP+gvaeTAAAJQ0lEQVR4nO2ca1MaWRqAm4soAt2JCtIIyUQbVFAUNBHUTGY1ipv7umpSc6mdH7I1/2P20+xUdmpzMffLaEzMVJToRJHIRcPF7NguoGiUiyJG6P3ALuuqYB9F41ad55M2b7/n7afOOd0NVS+jXKFAIPRgfuoC/p+AsgCAsgCAsgCAsgCAsgCAsgBg0wmyv3uX+CMajUajUYqiggkCgfn5ea/H888EMzNer3dtbW0/CwaAw+HgOF4klRYVFRUVFUmKivLz81EMQ1EURVEGg5GdnZ2dnZ0IVpaW7piQlqwkyewYhm0bQFHU7Oys0+GwWa02m81ut3s9HqAh9gIukahUKqVSqaqokCsUhYWFDAYjg/nBZO0Ig8EQi8Visfj0558njnz48MFmtb759dfXRuPExEQ8Hs/gcEwmU6lU6uvrT546pVSp8vLyMph8Kww6rzvJZbhHAoHA8NDQa6Px5cuXsz7frvOIcfzMmTP6+vo6nS7VHAeFzjIElnW1szOx5gUoiqGoAEVFIpFUJpPJZEKhkGZlFEVZxsd7e3uf9fSQJEnzLNmxY62trS2trZVqNf315ff7SZKcIcm5ublgIBAMhUL/3nGDN27dSobti6w0SXO4XJlUeuz48bKyMqVKVa5UisXiHZNbLZZ7d+8+evgwGAxuG4Bh2IWLF6+0t6tUqh2z+Xy+CbvdbrNNTk5O//YbSZKrq6upgmleV5JMytpKfkGBSqWqqa2tq6tTVVSwWKxUkWtra8/7+q7/+OPY2FjyoFar/eqbb5rPnuVwOKlOjMViVotleHh4dGTEZrN9WFigX97hkrURHo9XU1tb39Dwu6YmmUyWKswyPv7XH35AEORP335bqVanCiOnp/v7+42Dg6MjI8vLy7sr6fDK2gghlzc1NbUYDHRW1kasVuuznp7+/n6X07n3MkCvK8OPDjRxOZ0up/Mv339fXFx87sKFS5cvS6XSNPEkST64f//Jo0fv378/sCK38j8zK5XpjM+sTTCZzDqdruvq1bMtLRv3tXg8Pjw0dPPGjb5nz2KxWMbHBb3eTzOzNhGPx18bja+NRlwied7fnzze0tx8kC8AO3K4XqQ3qTlUppDDJuuQA2UBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBAGUBANyq4GZ3dygYDP2H5XDY5/N5PB6vx+PxeA5PW7YEHA5HIpFIiopwHBeLxXyBgM/nCxKgKGg2YFkVFRVpPvX7/f94/97hcDgdjnfv3jkdjpWVFdAhdk1ubq5coSgtLVWUlioUiuOffUa/SxUdMtwEQygUCoXCk6dOJf6lKMrtcplGR00mk2l0dGZmJrPDIQgilUq1NTXamhqtVltCEJntW7eJ/e0YwmAwCLmckMu7rl1DEMTr8QwMDAy8evXaaAyHw7tOKxAIdHp94+nTjY2NuESSuXp3gJasZD+WnJwcDofDYrEwDMOOHMEwTCgUymSyRGc2qUx29OjRNHlwiaSzq6uzq2t9fX3kzZuen3/u6+tbmJ+nWWtBQcHZlhZDW1vtyZNpWnFtZHFxcYYkp6enZ0iSJMn5+flAIBBYWlpaWorH42tra2lakW0FbGatrq4msi8uLm4bwOfzZceOlZWXV1ZWVqrVpaWlbPY2Q7DZbJ1er9Pr//zddyNv3nTfvv2stzcajW6bMzs7u9VgaO/oqK2tTe9ofX19cnLSarFYLJbJiQlyenov83ebsjOYC0GQcDg8YbdP2O13u7sRBOFwOGXl5ZVqtV6vr9PpeDzepngWi1Wn09XpdMFg8OGDB923b2/8tKy8/I8dHRcvXUJT37nC4fDw0NDQ0JBlfHxyYmJfb8e0WkJlBDabXa3RNDQ0NJw+rVKp9rITUxRls1oHBwYGBgbMY2MZ7xaVykNKWW6XKxKJhEKh5eXlSCQSWVkJhkKRlZVIJOL3+71er8/rnZubW19f30U1Yhw3GAyGtraq6mr61iiKMpvNPU+f9vT07K5zJ5vNFolEYhzHcVwoFHK5XG5uLoqiXC6Xy+XyeDyBQMDlcksIInkKLVl0iMfjCwsLXo9ndnbW6/VOTU0lWq6l6gu5FTGOnz9/vr2j48SJE2nCpqam7nR3P370iL4jFEXlCgVBEMUlJYk+s2IcLygoAJ3RGZOVirm5OZfT6XQ6nQ6HZXzc7Xbv2PhWW1PTdfXq78+dy8rKSh78+PHj0ydPbt64YRodTX86k8kkCKJSrSbkcrlcTsjlIpEoA1dyALI2EQ6H35rNZrP5rdn81mwOhUKpIoVC4Vdff33tyy8RBPn7Tz/97fp1v9+fKliAolVVVdUaTXV1tbqqis/n70fxKWUlYTKZybExDMvl8fh8Po/HO3LkSGFhYWLZi0SiQrE4Pz+f5iNPgng8brfZjIODg4ODYybTtlteYuht7/pZWVkajaa+oaG+sVGpVDKZAF8ExGKxhYUFn9fr9/sTG+7s7OzS0tLy8nI4HF4Oh5O7RygUoihqawZarTfTwGKxCgoKcImkuLi4hCAUCkUJQdBpfIsgyMrKyvDQ0PO+vv4XL1I9uCXIy8tram5uam4+VVeXm5tLJ7nP63W53U6Hw+1yud1un9c7Pz+/x/vmXmVtiwBF5QRByOUVlZUajaa4pCT9thqLxRIP9E8eP954c8Aw7Nz5861tbTs+jlIUNeV2m0wmm9XqdDhcLleaxb5r9kXWJjAM02i11RqNVqutVKuT/eq3Eo1GXzx/fvfOHQaD8Yf29qbm5jSNgldXV60Wi2l0dGxszDw2FggE9qf8/3IQsjaSk5Oj0Wr19fX6+nrQ9rcJSJJM9OkcePVq142Cd8dBy9qITCb7/IsvDAaDtqYm/VYdj8dHR0Z6e3p+eflyP77nocmnlJVEKBS2GgwXLl6sqq7e9NFbs/nhgwfPenvTPEMcGIdCVhJCLu/o7Lx85QqCIPfv3bt961ZGGk5nisMlK0EOl4sgyGok8qkL2cyh6K28iUOoKQH8KQwAKAsAKAsAKAuAfwF/kNkaGt4xpQAAAABJRU5ErkJggg==">
-            HEDSPI</h3>
-        <div class="line">
-            <span>--------------------------------------------------------------------------------------------------------------------------------------</span>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3">
-                    <h4> Thông tin </h4>
-                    <ul>
-                        <a href="/CSKH/infor">
-                            <li> Về chúng tôi </li>
-                        </a>
-                        <a href="/CSKH/infor">
-                            <li> Chính sách bảo mật </li>
-                        </a>
-                        <a href="/CSKH/infor">
-                            <li> Chính sách bảo hành </li>
-                        </a>
-                    </ul>
-                    <div class="question">
-                        <a href="/CSKH/frequent-question" style="color: rgb(158, 160, 53) ;">
-                            <img
-                                src="data:image/png;base64,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">
-                            Câu hỏi thường gặp
-                        </a>
-                    </div>
-
-                </div>
-                <div class="col-sm-3">
-                    <h4> Liên Hệ </h4>
-                    <ul>
-                        <li> Địa chỉ: số 1, Đại Cồ Việt, Hai Bà Trưng, Hà Nội </li>
-                        <li> Hotline : 1800 9898</li>
-                        <li> email: soict@gmail.com</li>
-                        <li class="face-you-zalo">
-                            <a href="#">
-                                <img alt="svgImg"
-                                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNjQiIGhlaWdodD0iNjQiCnZpZXdCb3g9IjAgMCAxNzIgMTcyIgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIHRyYW5zZm9ybT0iIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtZGFzaGFycmF5PSIiIHN0cm9rZS1kYXNob2Zmc2V0PSIwIiBmb250LWZhbWlseT0ibm9uZSIgZm9udC13ZWlnaHQ9Im5vbmUiIGZvbnQtc2l6ZT0ibm9uZSIgdGV4dC1hbmNob3I9Im5vbmUiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTogbm9ybWFsIj48cGF0aCBkPSJNMCwxNzJ2LTE3MmgxNzJ2MTcyeiIgZmlsbD0ibm9uZSI+PC9wYXRoPjxwYXRoIGQ9Ik04NiwxNzJjLTQ3LjQ5NjQ5LDAgLTg2LC0zOC41MDM1MSAtODYsLTg2djBjMCwtNDcuNDk2NDkgMzguNTAzNTEsLTg2IDg2LC04NnYwYzQ3LjQ5NjQ5LDAgODYsMzguNTAzNTEgODYsODZ2MGMwLDQ3LjQ5NjQ5IC0zOC41MDM1MSw4NiAtODYsODZ6IiBmaWxsPSJub25lIj48L3BhdGg+PHBhdGggZD0iTTg2LDE2OC41NmMtNDUuNTk2NjMsMCAtODIuNTYsLTM2Ljk2MzM3IC04Mi41NiwtODIuNTZ2MGMwLC00NS41OTY2MyAzNi45NjMzNywtODIuNTYgODIuNTYsLTgyLjU2djBjNDUuNTk2NjMsMCA4Mi41NiwzNi45NjMzNyA4Mi41Niw4Mi41NnYwYzAsNDUuNTk2NjMgLTM2Ljk2MzM3LDgyLjU2IC04Mi41Niw4Mi41NnoiIGZpbGw9Im5vbmUiPjwvcGF0aD48cGF0aCBkPSJNMCwxNzJ2LTE3MmgxNzJ2MTcyeiIgZmlsbD0ibm9uZSI+PC9wYXRoPjxwYXRoIGQ9Ik0zLjQ0LDE2OC41NnYtMTY1LjEyaDE2NS4xMnYxNjUuMTJ6IiBmaWxsPSJub25lIj48L3BhdGg+PHBhdGggZD0iIiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0iIzllYTAzNSI+PHBhdGggZD0iTTg2LDEwLjMyYy00MS43NTYyMywwIC03NS42OCwzMy45MjM3NyAtNzUuNjgsNzUuNjhjMCwzNy45MDU4MiAyNy45NTg3MSw2OS4yNzU5NCA2NC4zNzIzNSw3NC43NDYxbDMuOTUwNjIsMC41OTc5N3YtNTkuNjM1NjNoLTE3Ljg3ODZ2LTEyLjEwNzE5aDE3Ljg3ODZ2LTE2LjA3Nzk3YzAsLTkuOTAwNiAyLjM3NTgyLC0xNi40MjEyOSA2LjMwODksLTIwLjUxMjM1YzMuOTMzMDksLTQuMDkxMDUgOS43NDQ0NiwtNi4xNTQzNyAxNy44MzE1NiwtNi4xNTQzN2M2LjQ2NjU0LDAgOC45ODIyNCwwLjM5MTgxIDExLjM3NDg1LDAuNjg1MzF2OS45MTAxNmgtOC40MTg2Yy00Ljc3NjczLDAgLTguNjk1NzQsMi42NjUwNyAtMTAuNzI5ODQsNi4yMTQ4NGMtMi4wMzQxLDMuNTQ5NzggLTIuNjY3MzUsNy43ODgxNyAtMi42NjczNSwxMi4xMDcxOXYxMy44MjA0N2gyMS4wNjMyOGwtMS44NzQ1MywxMi4xMDcxOWgtMTkuMTg4NzV2NTkuNzM2NDFsMy45MDM2LC0wLjUzMDc4YzM2LjkzMTIzLC01LjAwODczIDY1LjQzMzksLTM2LjYzMSA2NS40MzM5LC03NC45MDczNWMwLC00MS43NTYyMyAtMzMuOTIzNzcsLTc1LjY4IC03NS42OCwtNzUuNjh6TTg2LDE3LjJjMzguMDM4MDEsMCA2OC44LDMwLjc2MTk5IDY4LjgsNjguOGMwLDMzLjQ3MDQ4IC0yMy45NTY4NSw2MC45OTczOCAtNTUuNTc3NSw2Ny4xOTQyMnYtNDQuNjEyNWgxOC4yMDc4MWwzLjk5NzY1LC0yNS44NjcxOWgtMjIuMjA1NDd2LTYuOTQwNDdjMCwtMy41Njg5MSAwLjY1Mjk5LC02Ljc2NjY2IDEuNzUzNiwtOC42ODczNWMxLjEwMDYsLTEuOTIwNjkgMi4xNjE1MiwtMi43NTQ2OSA0Ljc2MzU5LC0yLjc1NDY5aDE1LjI5ODZ2LTIzLjAxODQ0bC0yLjk4MzEzLC0wLjQwMzEzYy0yLjA2MzI4LC0wLjI3OTE5IC02Ljc3MzkyLC0wLjkzMzkgLTE1LjI3MTcyLC0wLjkzMzljLTkuMjk4NjYsMCAtMTcuMjgwMjksMi41MzMwNiAtMjIuNzksOC4yNjQwNmMtNS41MDk3MSw1LjczMSAtOC4yMzA0NywxNC4yNjQ2MSAtOC4yMzA0NywyNS4yODI2NXY5LjE5Nzk3aC0xNy44Nzg2djI1Ljg2NzE5aDE3Ljg3ODZ2NDQuMzkwNzhjLTMxLjExMjUxLC02LjU5MDY2IC01NC41NjI5NywtMzMuODcxMTIgLTU0LjU2Mjk3LC02Ni45NzkyMmMwLC0zOC4wMzgwMSAzMC43NjE5OSwtNjguOCA2OC44LC02OC44eiI+PC9wYXRoPjwvZz48cGF0aCBkPSJNODYsMTcyYy00Ny40OTY0OSwwIC04NiwtMzguNTAzNTEgLTg2LC04NnYwYzAsLTQ3LjQ5NjQ5IDM4LjUwMzUxLC04NiA4NiwtODZ2MGM0Ny40OTY0OSwwIDg2LDM4LjUwMzUxIDg2LDg2djBjMCw0Ny40OTY0OSAtMzguNTAzNTEsODYgLTg2LDg2eiIgZmlsbD0ibm9uZSI+PC9wYXRoPjxwYXRoIGQ9Ik04NiwxNjguNTZjLTQ1LjU5NjYzLDAgLTgyLjU2LC0zNi45NjMzNyAtODIuNTYsLTgyLjU2djBjMCwtNDUuNTk2NjMgMzYuOTYzMzcsLTgyLjU2IDgyLjU2LC04Mi41NnYwYzQ1LjU5NjYzLDAgODIuNTYsMzYuOTYzMzcgODIuNTYsODIuNTZ2MGMwLDQ1LjU5NjYzIC0zNi45NjMzNyw4Mi41NiAtODIuNTYsODIuNTZ6IiBmaWxsPSJub25lIj48L3BhdGg+PC9nPjwvZz48L3N2Zz4=">
-                            </a>
-                            &nbsp;
-                            <a href="#">
-                                <img alt="svgImg"
-                                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNTAiIGhlaWdodD0iNTAiCnZpZXdCb3g9IjAgMCAxNzIgMTcyIgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDE3MnYtMTcyaDE3MnYxNzJ6IiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0iIzllYTAzNSI+PHBhdGggZD0iTTMwLjk2LDEzLjc2Yy05LjQ1ODM0LDAgLTE3LjIsNy43NDE2NiAtMTcuMiwxNy4ydjExMC4wOGMwLDkuNDU4MzQgNy43NDE2NiwxNy4yIDE3LjIsMTcuMmgxMTAuMDhjOS40NTgzNCwwIDE3LjIsLTcuNzQxNjYgMTcuMiwtMTcuMnYtMTEwLjA4YzAsLTkuNDU4MzQgLTcuNzQxNjYsLTE3LjIgLTE3LjIsLTE3LjJ6TTMwLjk2LDIwLjY0aDIyLjYyMjAzYy0xMS44OTU5NiwxMi4zNzc0OSAtMTkuMTgyMDMsMjguNjMzMjggLTE5LjE4MjAzLDQ2LjQ0YzAsMTguNDQzMDUgNy44MDI0MywzNS4yNTUxNyAyMC40NjUzMSw0Ny43NzcwM2MtMC40NjAzLC0wLjQzODUyIDAuMTM1NTksMC4zMjQwOCAwLjE5NDg0LDEuNjcyOTdjMC4wNjExNiwxLjM5MjQyIC0wLjE0ODUsMy4zMDU1NSAtMC43MTIxOSw1LjIwMDMxYy0xLjEyNzM2LDMuNzg5NTIgLTMuNDg1MzIsNy4yODI1NiAtNy4yNzY0LDguNTQ2MjVjLTEuNDgwNjQsMC40OTM0MyAtMi40NDM2NCwxLjkyMTcyIC0yLjM0NTg5LDMuNDc5MzRjMC4wOTc3NSwxLjU1NzYzIDEuMjMxNzUsMi44NTQzMiAyLjc2MjQ2LDMuMTU4NzhjOS40OTMzOCwxLjg5ODY4IDE2LjIwODUsLTAuOTU5NjUgMjEuMTU3MzQsLTMuMjMxNzJjNC45NDg4NSwtMi4yNzIwNiA3LjYyMjg5LC0zLjgwMTA0IDEyLjYyNDUzLC0xLjc4MDQ3YzAuMDEzNDEsMC4wMDQ1NiAwLjAyNjg1LDAuMDA5MDQgMC4wNDAzMSwwLjAxMzQ0YzkuMzY0NzcsMy42NjA1MiAxOS42NzUxNCw1LjY4NDA2IDMwLjQ4OTY5LDUuNjg0MDZjMTQuNDM4NzgsMCAyNy45NzEyMiwtMy42MDc5OCAzOS41NiwtOS44OTY3MnYxMy4zMzY3MmMwLDUuNzM5NTggLTQuNTgwNDIsMTAuMzIgLTEwLjMyLDEwLjMyaC0xMTAuMDhjLTUuNzM5NTgsMCAtMTAuMzIsLTQuNTgwNDIgLTEwLjMyLC0xMC4zMnYtMTEwLjA4YzAsLTUuNzM5NTggNC41ODA0MiwtMTAuMzIgMTAuMzIsLTEwLjMyek02My42MjY1NiwyMC42NGg3Ny40MTM0NGM1LjczOTU4LDAgMTAuMzIsNC41ODA0MiAxMC4zMiwxMC4zMnY4OC43NjgxM2MtMTEuMjU5NSw2LjkwNzYzIC0yNC44NTUyMiwxMC45OTE4NyAtMzkuNTYsMTAuOTkxODdjLTkuOTQxMDksMCAtMTkuMzg5MDYsLTEuODU5NjQgLTI3Ljk1LC01LjIwMDMxYy03LjI2ODgzLC0yLjkzNjQ3IC0xMy4xODk5MSwtMC4zMzM5NiAtMTguMDczNDQsMS45MDgxM2MtMi42NDQ4MiwxLjIxNDI2IC01LjI1NDIxLDIuMjIzNjggLTguMjAzNiwyLjc4MTU2YzEuNDU5MTYsLTIuMDgwNTMgMi43MDczLC00LjMwMjcxIDMuMzY2MSwtNi41MTcxOWMwLjc3ODM1LC0yLjYxNjM3IDEuMDk0NzksLTUuMTc4NDEgMC45OTQzNywtNy40NjQ1M2MtMC4xMDAwNywtMi4yNzgyMSAtMC4yOTkxNCwtNC4zNjQ3MSAtMi4yMjM5LC02LjI1NTE1bC0wLjAwNjcyLC0wLjAwNjcyYy0xMS40ODQ1OCwtMTEuMzU2OTYgLTE4LjQyMjgxLC0yNi4zNzgxMSAtMTguNDIyODEsLTQyLjg4NTc4YzAsLTE4LjMwOTcyIDguNTUyNDYsLTM0Ljc4NjU1IDIyLjM0NjU2LC00Ni40NHpNMTEzLjQ2NjI1LDUxLjU1Mjk3Yy0xLjg5NzIyLDAuMDI5NjYgLTMuNDEyMjMsMS41ODk3NiAtMy4zODYyNSwzLjQ4NzAzdjMwLjk2Yy0wLjAxNzU0LDEuMjQwNTkgMC42MzQyNSwyLjM5NDUyIDEuNzA1OCwzLjAxOTkzYzEuMDcxNTUsMC42MjU0MSAyLjM5Njg0LDAuNjI1NDEgMy40NjgzOSwwYzEuMDcxNTUsLTAuNjI1NDEgMS43MjMzNSwtMS43NzkzNSAxLjcwNTgsLTMuMDE5OTN2LTMwLjk2YzAuMDEyNzMsLTAuOTI5ODMgLTAuMzUxNDksLTEuODI1MjIgLTEuMDA5NjcsLTIuNDgyMTRjLTAuNjU4MTksLTAuNjU2OTIgLTEuNTU0MjcsLTEuMDE5NDIgLTIuNDg0MDgsLTEuMDA0ODl6TTYxLjkyLDU1LjA0Yy0xLjI0MDU5LC0wLjAxNzU0IC0yLjM5NDUyLDAuNjM0MjUgLTMuMDE5OTMsMS43MDU4Yy0wLjYyNTQxLDEuMDcxNTUgLTAuNjI1NDEsMi4zOTY4NCAwLDMuNDY4MzljMC42MjU0MSwxLjA3MTU1IDEuNzc5MzUsMS43MjMzNSAzLjAxOTkzLDEuNzA1OGgxMC45OTg2bC0xMy45MTQ1MywyMi4yNTkyMmMtMC42NjExMywxLjA2MDE5IC0wLjY5NTUxLDIuMzk1NDggLTAuMDg5NzksMy40ODgyOGMwLjYwNTcxLDEuMDkyOCAxLjc1NjI5LDEuNzcxMyAzLjAwNTczLDEuNzcyNWgxNy4yYzEuMjQwNTksMC4wMTc1NCAyLjM5NDUyLC0wLjYzNDI1IDMuMDE5OTMsLTEuNzA1OGMwLjYyNTQxLC0xLjA3MTU1IDAuNjI1NDEsLTIuMzk2ODQgMCwtMy40NjgzOWMtMC42MjU0MSwtMS4wNzE1NSAtMS43NzkzNSwtMS43MjMzNSAtMy4wMTk5MywtMS43MDU4aC0xMC45OTg2bDEzLjkxNDUzLC0yMi4yNTkyMmMwLjY2MTEzLC0xLjA2MDE5IDAuNjk1NTEsLTIuMzk1NDggMC4wODk3OSwtMy40ODgyOGMtMC42MDU3MSwtMS4wOTI4IC0xLjc1NjI5LC0xLjc3MTMgLTMuMDA1NzMsLTEuNzcyNXpNMTAzLjE0NjI1LDY1LjMxMjk3Yy0xLjE0NTg4LDAuMDIwMjIgLTIuMjA2NDUsMC42MDk3IC0yLjgyODYsMS41NzIxOWMtMS43MTE3LC0wLjkzOTkzIC0zLjY0MTc2LC0xLjUyNTE1IC01LjcxNzY1LC0xLjUyNTE1Yy02LjYwODc2LDAgLTEyLjA0LDUuNDMxMjQgLTEyLjA0LDEyLjA0YzAsNi42MDg3NiA1LjQzMTI0LDEyLjA0IDEyLjA0LDEyLjA0YzIuMDczOCwwIDQuMDAwNDcsLTAuNTg2OTggNS43MTA5NCwtMS41MjUxNWMwLjgzMjczLDEuMjg3ODkgMi40MTczNywxLjg2OTA2IDMuODg1MzEsMS40MjQ5M2MxLjQ2Nzk0LC0wLjQ0NDEyIDIuNDY0NjQsLTEuODA2MjcgMi40NDM3NSwtMy4zMzk3OHYtOC42di04LjZjMC4wMTI3MywtMC45Mjk4MyAtMC4zNTE0OSwtMS44MjUyMiAtMS4wMDk2NywtMi40ODIxNGMtMC42NTgxOSwtMC42NTY5MiAtMS41NTQyNywtMS4wMTk0MiAtMi40ODQwOCwtMS4wMDQ4OXpNMTMyLjQ0LDY1LjM2Yy02LjYwODc2LDAgLTEyLjA0LDUuNDMxMjQgLTEyLjA0LDEyLjA0YzAsNi42MDg3NiA1LjQzMTI0LDEyLjA0IDEyLjA0LDEyLjA0YzYuNjA4NzYsMCAxMi4wNCwtNS40MzEyNCAxMi4wNCwtMTIuMDRjMCwtNi42MDg3NiAtNS40MzEyNCwtMTIuMDQgLTEyLjA0LC0xMi4wNHpNOTQuNiw3Mi4yNGMyLjg5MDU0LDAgNS4xNiwyLjI2OTQ2IDUuMTYsNS4xNmMwLDIuODkwNTQgLTIuMjY5NDYsNS4xNiAtNS4xNiw1LjE2Yy0yLjg5MDU0LDAgLTUuMTYsLTIuMjY5NDYgLTUuMTYsLTUuMTZjMCwtMi44OTA1NCAyLjI2OTQ2LC01LjE2IDUuMTYsLTUuMTZ6TTEzMi40NCw3Mi4yNGMyLjg5MDU0LDAgNS4xNiwyLjI2OTQ2IDUuMTYsNS4xNmMwLDIuODkwNTQgLTIuMjY5NDYsNS4xNiAtNS4xNiw1LjE2Yy0yLjg5MDU0LDAgLTUuMTYsLTIuMjY5NDYgLTUuMTYsLTUuMTZjMCwtMi44OTA1NCAyLjI2OTQ2LC01LjE2IDUuMTYsLTUuMTZ6Ij48L3BhdGg+PC9nPjwvZz48L3N2Zz4=">
-                            </a>
-                            &nbsp;
-                            <a href="#">
-                                <img alt="svgImg"
-                                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNTAiIGhlaWdodD0iNTAiCnZpZXdCb3g9IjAgMCAxNzIgMTcyIgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDE3MnYtMTcyaDE3MnYxNzJ6IiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0iIzllYTAzNSI+PHBhdGggZD0iTTE4LjkyLDI0LjA4Yy04LjQ5MjUsMCAtMTUuNDM5NjksNi45MzM3NSAtMTUuNDgsMTUuNDI2MjVjMCwwIDAsMC4wMTM0NCAwLDAuMDI2ODhjMCwwLjAxMzQ0IDAsMC4wMTM0NCAwLDAuMDI2ODd2OTIuODhjMCw4LjUwNTk0IDYuOTc0MDYsMTUuNDggMTUuNDgsMTUuNDhoMTM0LjE2YzguNTA1OTQsMCAxNS40OCwtNi45NzQwNiAxNS40OCwtMTUuNDh2LTkyLjg4YzAsLTAuMDEzNDQgMCwtMC4wMTM0NCAwLC0wLjAyNjg3YzAsLTAuMDEzNDQgMCwtMC4wMjY4OCAwLC0wLjAyNjg4Yy0wLjA0MDMxLC04LjQ5MjUgLTYuOTg3NSwtMTUuNDI2MjUgLTE1LjQ4LC0xNS40MjYyNXpNMjcuODY5MzgsMzAuOTZoMTE2LjI3NDY5bC01OC4xNDQwNiw0MC41Mjc1ek0xNi40MjA2MywzMS4zNjMxM2w2OS41NzkzNyw0OC41MDkzN2w2OS41OTI4MSwtNDguNTA5MzdjMy41MjA2MiwxLjA2MTU2IDYuMDYwMzEsNC4yNTk2OSA2LjA4NzE5LDguMTU2NTZjLTAuMDEzNDQsMC43MjU2MyAtMC43NTI1LDIuMTc2ODggLTEuODI3NSwzLjM0NTk0Yy0xLjA4ODQ0LDEuMTgyNSAtMi4xNSwxLjkyMTU2IC0yLjE1LDEuOTIxNTZsLTAuMDEzNDQsMC4wMjY4OGwtNzEuNjg5MDYsNTAuNzRsLTcxLjY4OTA2LC01MC43NGwtMC4wMTM0NCwtMC4wMjY4OGMwLDAgLTEuMDYxNTYsLTAuNzM5MDYgLTIuMTUsLTEuOTIxNTZjLTEuMDc1LC0xLjE2OTA2IC0xLjgxNDA2LC0yLjYyMDMxIC0xLjgyNzUsLTMuMzQ1OTRjMC4wMjY4OCwtMy44OTY4NyAyLjU2NjU2LC03LjA5NSA2LjEwMDYzLC04LjE1NjU2ek0xMC4zMiw1MC40MDQwNmwwLjAyNjg4LDAuMDI2ODdsMC4wMjY4NywwLjAxMzQ0djAuMDEzNDRsMTAuMjY2MjUsNy4yNTYyNXY4My4zMjU5NGgtMS43MmMtNC43ODM3NSwwIC04LjYsLTMuODE2MjUgLTguNiwtOC42ek0xNjEuNjgsNTAuNDA0MDZ2ODIuMDM1OTRjMCw0Ljc4Mzc1IC0zLjgxNjI1LDguNiAtOC42LDguNmgtMS43MnYtODMuMzI1OTRsMTAuMjY2MjUsLTcuMjU2MjV2LTAuMDEzNDR6TTI3LjUyLDYyLjU3ODQ0bDU4LjQ4LDQxLjM4NzVsNTguNDgsLTQxLjM4NzV2NzguNDYxNTZoLTExNi45NnoiPjwvcGF0aD48L2c+PC9nPjwvc3ZnPg==">
-                            </a>
+        <nav class="navbar navbar-expand-lg navbar-dark info-color-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#"><i class="fas fa-shopping-cart"></i></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active user_view">
+                            <a class="nav-link" href="../../CSKH">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active admin_view">
+                            <a class="nav-link" href="../../CSKH/admin">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown user_view">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Guarantee</a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="../../CSKH/bao-hanh/tracuu">Guarantee infor</a>
+                                <a class="dropdown-item" href="../../CSKH/bao-hanh/repair-schedule">Guarantee
+                                    schedule</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown admin_view">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Guarantee</a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Update guarantee schedule</a>
+                                <a class="dropdown-item" href="#">Create guarantee bill</a>
+                            </div>
+                        </li>
+                        <li class="nav-item admin_view">
+                            <a class="nav-link" href="#">Feedback</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-sm-6">
-                    <h4>Góp ý</h4>
-                    <div class="Gop_y_content">
-                        <select class="browser-default custom-select">
-                            <option selected value="0" >Chọn chủ đề</option>
-                            <option value="1">Chất lượng dịch vụ</option>
-                            <option value="2">Nhân viên</option>
-                            <option value="3">Sản phẩm</option>
-                            
-                        </select>
-                        <div class="md-form">
-                            <i class="fas fa-pencil-alt prefix"></i>
-                            <textarea id="form10" class="md-textarea form-control" rows="3"
-                                placeholder="Góp ý"></textarea>
-                        </div>
-                        <button type="button" class="btn btn-primary">Submit</button>
-                    </div>
-
-                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="view intro-2">
+        <div class="full-bg-img">
+            <div class="mask flex-center">
             </div>
         </div>
-        <div class="descript">
-            &copy; Copyright 2019 - 2029 SP-08 Privacy Policy
-        </div>
     </div>
+    <!-- Footer -->
+    <footer class="page-footer font-small blue-grey lighten-5">
+
+        <div class="info-color-dark">
+            <div class="container">
+
+                <!-- Grid row-->
+                <div class="row py-4 d-flex align-items-center">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                        <h6 class="mb-0">Get connected with us on social networks!</h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+                        <!-- Facebook -->
+                        <a class="fb-ic">
+                            <i class="fab fa-facebook-f white-text mr-4"> </i>
+                        </a>
+                        <!-- Twitter -->
+                        <a class="tw-ic">
+                            <i class="fab fa-twitter white-text mr-4"> </i>
+                        </a>
+                        <!-- Google +-->
+                        <a class="gplus-ic">
+                            <i class="fab fa-google-plus-g white-text mr-4"> </i>
+                        </a>
+                        <!--Linkedin -->
+                        <a class="li-ic">
+                            <i class="fab fa-linkedin-in white-text mr-4"> </i>
+                        </a>
+                        <!--Instagram-->
+                        <a class="ins-ic">
+                            <i class="fab fa-instagram white-text"> </i>
+                        </a>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row-->
+
+            </div>
+        </div>
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left mt-5">
+
+            <!-- Grid row -->
+            <div class="row mt-3 dark-grey-text">
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-4 col-xl-5 mb-4">
+
+                    <!-- Content -->
+                    <h6 class="text-uppercase font-weight-bold">Feedback</h6>
+                    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <select class="browser-default custom-select mb-4">
+                        <option selected value="0" disabled>Choose option</option>
+                        <option value="1">Service</option>
+                        <option value="2">Staff</option>
+                        <option value="3">Product</option>
+                    </select>
+
+                    <!-- Message -->
+                    <div class="form-group">
+                        <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3"
+                            placeholder="Message"></textarea>
+                    </div>
+
+                    <!-- Send button -->
+                    <button class="btn info-color-dark btn-block white-text " type="submit">Send</button>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 user_view">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+                    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a class="dark-grey-text" href="../../../CSKH/infor">About us</a>
+                    </p>
+                    <p>
+                        <a class="dark-grey-text" href="../../../CSKH/infor">Guarantee</a>
+                    </p>
+                    <p>
+                        <a class="dark-grey-text" href="../../../CSKH/infor">Security</a>
+                    </p>
+                    <p>
+                        <a class="dark-grey-text" href="../../../CSKH/frequent-question">FAQ</a>
+                    </p>
+
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 admin_view">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+                    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a class="dark-grey-text" href="../../../CSKH/infor/admin">About us</a>
+                    </p>
+                    <p>
+                        <a class="dark-grey-text" href="../../../CSKH/infor/admin">Guarantee</a>
+                    </p>
+                    <p>
+                        <a class="dark-grey-text" href="../../../CSKH/infor/admin">Security</a>
+                    </p>
+                    <p>
+                        <a class="dark-grey-text" href="../../../CSKH/frequent-question/admin">FAQ</a>
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                    <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <i class="fas fa-home mr-3"></i> Ha Noi, 1 Dai Co Viet, VN</p>
+                    <p>
+                        <i class="fas fa-envelope mr-3"></i> alexSon@gmail.com</p>
+                    <p>
+                        <i class="fas fa-phone mr-3"></i> + 84 234 567 88</p>
+                    <p>
+                        <i class="fas fa-print mr-3"></i> + 84 234 567 89</p>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center text-black-50 py-3">© 2018 Copyright:
+            <a class="dark-grey-text" href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+            - SP08
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
 </body>
 <script src="../assets/js/footer.js"></script>
+<script src="../assets/js/header.js"></script>
+
 </html>

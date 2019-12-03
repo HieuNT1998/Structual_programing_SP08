@@ -3,12 +3,22 @@ $('.create_guarantee .add').on('click', () => {
     $('.create_guarantee .create_form').append(`
                 <table class="product_${product_index}">
                 <tr>
-                    <td>Product ID : </td>
-                    <td> <input type="text"></td>
+                    <td>
+                        <h6 class="text-uppercase font-weight-bold"> Product ID: </h6>
+                    </td>
+                    <td>
+                        <input class="form-control" type="text" placeholder="product id">
+                    </td>
                 </tr>
                 <tr>
-                    <td> detail guarantee : </td>
-                    <td> <textarea name="" id="" cols="50" rows="5"></textarea> </td>
+                    <td>
+                        <h6 class="text-uppercase font-weight-bold" > Detail: </h6>
+                    </td>
+                    <td>
+                        <div class="form-group purple-border">
+                            <textarea class="form-control" id="exampleFormControlTextarea4" rows="5" cols="50" placeholder="Detail"></textarea>
+                        </div>
+                    </td>
                 </tr>
                 </table>
             `)

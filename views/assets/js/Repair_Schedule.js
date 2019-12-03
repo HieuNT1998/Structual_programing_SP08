@@ -1,4 +1,5 @@
-$('.repair_schedule button').on('click', (req, res) => {
+$('.repair_schedule .button').on('click', (req, res) => {
+    $('.repair_schedule table tbody').empty();
     var scheduleID = $('.repair_schedule input').val();
     $.ajax({
         url: '/schedule/' + scheduleID,

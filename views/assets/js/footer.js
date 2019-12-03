@@ -1,5 +1,6 @@
 topic_name = ["Chất lượng dịch vụ","Nhân viên","Sản phẩm"]
-    $('.footer button').on('click',(req,res)=>{
+
+    $('footer button').on('click',(req,res)=>{
         var topic = $('select').val();
         var content = $('textarea').val();
         var feedback ={
@@ -7,12 +8,12 @@ topic_name = ["Chất lượng dịch vụ","Nhân viên","Sản phẩm"]
             topic_id : topic,
             feedback_content : content 
         }
-        if(topic==0){
+        if(topic == null){
             alert("Ban phai chon topic");
-        } 
+        }
         else{
             $.ajax({
-                url : '/feedback',
+                url : '/CSKH/feedback',
                 type : 'post',
                 contentType: "application/json",
                 data :JSON.stringify({
